@@ -6,4 +6,6 @@ services:
       - "443:443"
     volumes:
       - "./certs:/cert"
-      - "./conf:/etc/nginx/conf.d"
+      - "./config:/etc/nginx/conf.d"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
