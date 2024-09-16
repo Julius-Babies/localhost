@@ -19,7 +19,7 @@ I recommend using Let'sEncrypt with a wildcard certificate for your subdomain. I
 You should have a `fullchain.pem` and `privkey.pem`-file at the end. Copy them into the `/certs`-directory
 
 # 3. Configure your subdomains
-Modify the `/conf/default.conf`-file to your needs. Replace the example values after `server_name` with your desired domain.
+Modify the `/config/default.conf`-file to your needs. Replace the example values after `server_name` with your desired domain.
 Also, update the `location`-blocks in the file. The example is setup to use an application on port 8000 on the Docker host (not necessarily a container, if your app runs in a container make sure to port-forward it in Docker) when a request starts with `/api`, otherwise it serves what an app on port 5173 responds.
 
 # 4. Start the container
